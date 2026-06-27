@@ -53,7 +53,7 @@
 
 :root {
   color-scheme: light;
-  /* Theatre Media — light editorial palette */
+  /* Stagecraft Media — light editorial palette */
   /* warm cream paper background */
   --background: oklch(0.975 0.008 80);
   --foreground: oklch(0.27 0.03 270);

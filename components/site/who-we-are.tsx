@@ -28,15 +28,15 @@ export function WhoWeAre() {
       className="mx-auto max-w-7xl scroll-mt-24 px-5 py-24 lg:px-8 lg:py-36"
     >
       <Reveal>
-        <p className="mb-10 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-primary">
-          <span className="h-px w-8 bg-primary" />
+        <p className="mb-10 flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-primary max-lg:justify-center sm:text-xs sm:tracking-[0.25em]">
+          <span className="hidden h-px w-8 bg-primary sm:block" />
           01 / Who we are
         </p>
       </Reveal>
 
-      <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+      <div className="grid gap-12 max-lg:text-center lg:grid-cols-[1.1fr_1fr] lg:gap-20">
         <Reveal>
-          <h2 className="font-serif text-[clamp(2rem,4.5vw,3.4rem)] font-medium leading-[1.05] tracking-tight text-[var(--ink)]">
+          <h2 className="mx-auto max-w-[13ch] font-serif text-[clamp(2rem,7vw,3.4rem)] font-medium leading-[1.05] tracking-tight text-[var(--ink)] lg:mx-0 lg:max-w-none lg:text-[clamp(2rem,4.5vw,3.4rem)]">
             A full-service media company,{' '}
             <span className="italic text-primary">built backstage.</span>
           </h2>

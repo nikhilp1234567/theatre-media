@@ -30,7 +30,7 @@ const slides: Slide[] = [
       'Monthly performance reports',
     ],
     cta: 'Enquire about digital',
-    image: '/images/marquee.png',
+    image: '/images/marquee.webp',
     alt: 'A glowing theatre marquee at dusk',
   },
   {
@@ -41,7 +41,7 @@ const slides: Slide[] = [
     body: 'We programme, schedule and refresh the loop, mixing your show trailers and venue announcements with carefully chosen local advertising. The result feels like part of the experience, not an interruption — and generates a meaningful new revenue stream.',
     bullets: ['Mixed with your own promos', 'Refreshed monthly', 'Daypart targeting'],
     cta: 'Enquire about on-screen',
-    image: '/images/foyer-screen.png',
+    image: '/images/foyer-screen.webp',
     alt: 'A theatre foyer bar with a digital advertising screen',
   },
   {
@@ -52,7 +52,7 @@ const slides: Slide[] = [
     body: 'From the box office queue to the stalls corridor, we audit your building, identify the most valuable wall space and turn each frame into a sellable site. We sell, design, print and rotate the posters, and you receive a cheque every quarter.',
     bullets: ['Site audit & valuation', 'We sell, design and rotate', 'Quarterly revenue share'],
     cta: 'Enquire about out-of-home',
-    image: '/images/poster-frame.png',
+    image: '/images/poster-frame.webp',
     alt: 'A gold framed theatre poster lit on a foyer wall',
   },
   {
@@ -63,7 +63,7 @@ const slides: Slide[] = [
     body: 'Editorial planning, copywriting, photography, design, print and distribution — all delivered by our in-house team and underwritten entirely by local advertising. You approve every page; we do the heavy lifting and put guides into the hands of audiences across your catchment.',
     bullets: ['End-to-end production', 'You approve every page', 'Distributed across your catchment'],
     cta: 'Enquire about editorial',
-    image: '/images/whats-on-guides.png',
+    image: '/images/whats-on-guides.webp',
     alt: "A stack of premium printed theatre What's On guides",
   },
   {
@@ -74,7 +74,7 @@ const slides: Slide[] = [
     body: 'Folded, printed on a tactile uncoated stock and entirely branded to your theatre, the map highlights your venue, the streets around it and the local restaurants, bars and hotels who help fund it. Visitors keep them. Visitors come back.',
     bullets: ['Pocket-sized, premium stock', 'Your branding throughout', 'Funded by local partners'],
     cta: 'Enquire about keepsake',
-    image: '/images/theatre-map.png',
+    image: '/images/theatre-map.webp',
     alt: 'A folded illustrated pocket theatre district map',
   },
   {
@@ -85,7 +85,7 @@ const slides: Slide[] = [
     body: 'Every veteran ticket is bought at full price through your box office, supporting your bottom line while filling seats with people who might otherwise never come. We handle the fundraising, the partnerships with veterans’ associations and the invitations.',
     bullets: ['Tickets bought at full price', 'Partnerships with local RBL & associations', 'Filled seats, real impact'],
     cta: 'Enquire about community',
-    image: '/images/veterans.png',
+    image: '/images/veterans.webp',
     alt: 'Smiling military veterans seated in a theatre auditorium',
   },
   {
@@ -96,7 +96,7 @@ const slides: Slide[] = [
     body: 'From the dedication plaque on the headrest to the donor wall in the foyer, we manage the entire programme: marketing, sales, payment processing, plaque manufacture and donor reporting — with audited accounts delivered to your board.',
     bullets: ['Audited, transparent reporting', 'Dedication plaques manufactured & fitted', 'Donor stewardship included'],
     cta: 'Enquire about fundraising',
-    image: '/images/theatre-seats.png',
+    image: '/images/theatre-seats.webp',
     alt: 'Rows of red velvet theatre seats',
   },
 ]
@@ -134,20 +134,20 @@ export function ServiceSlides() {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6">
+        <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6 max-lg:justify-center max-lg:text-center">
           <div>
-            <p className="mb-4 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-primary">
-              <span className="h-px w-8 bg-primary" />
+            <p className="mb-4 flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-primary max-lg:justify-center sm:text-xs sm:tracking-[0.25em]">
+              <span className="hidden h-px w-8 bg-primary sm:block" />
               02 / What we do
             </p>
-            <h2 className="max-w-xl font-serif text-[clamp(2rem,4.5vw,3.2rem)] font-medium leading-[1.05] tracking-tight text-background">
+            <h2 className="mx-auto max-w-[13ch] font-serif text-[clamp(2rem,7vw,3.2rem)] font-medium leading-[1.05] tracking-tight text-background lg:max-w-xl lg:text-[clamp(2rem,4.5vw,3.2rem)]">
               One partner, the{' '}
               <span className="italic text-[var(--gold)]">whole pipeline.</span>
             </h2>
           </div>
 
           {/* controls */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 max-lg:w-full">
             <span className="font-mono text-sm text-background/60">
               <span className="text-background">{slide.num}</span> / 07
             </span>
@@ -188,6 +188,10 @@ export function ServiceSlides() {
                   key={slide.image}
                   src={slide.image}
                   alt={slide.alt}
+                  width={1254}
+                  height={1254}
+                  loading="lazy"
+                  decoding="async"
                   initial={{ scale: 1.1 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 1.2, ease: easing }}
@@ -200,11 +204,11 @@ export function ServiceSlides() {
               </div>
 
               {/* content */}
-              <div className="flex flex-col justify-center gap-6 p-8 lg:p-14">
-                <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
+              <div className="flex flex-col justify-center gap-6 p-6 sm:p-8 lg:p-14">
+                <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-primary sm:text-xs sm:tracking-[0.25em]">
                   {slide.num} · {slide.tag}
                 </p>
-                <h3 className="font-serif text-[clamp(1.75rem,3.5vw,2.6rem)] font-medium leading-[1.05] text-background">
+                <h3 className="font-serif text-[clamp(1.75rem,7vw,2.6rem)] font-medium leading-[1.05] text-background lg:text-[clamp(1.75rem,3.5vw,2.6rem)]">
                   {slide.title}
                 </h3>
                 <p className="font-serif text-lg italic leading-relaxed text-[var(--gold)]">
@@ -225,7 +229,7 @@ export function ServiceSlides() {
 
                 <a
                   href="#contact"
-                  className="group mt-3 inline-flex w-fit items-center gap-2 border border-background/25 px-5 py-3 font-mono text-xs uppercase tracking-[0.2em] text-background transition-colors hover:border-primary hover:text-primary"
+                  className="group mt-3 inline-flex w-fit items-center gap-2 border border-background/25 px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-background transition-colors hover:border-primary hover:text-primary sm:tracking-[0.2em]"
                 >
                   {slide.cta}
                   <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -236,7 +240,7 @@ export function ServiceSlides() {
         </div>
 
         {/* progress dots */}
-        <div className="mt-8 flex flex-wrap items-center gap-2">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 lg:justify-start">
           {slides.map((s, i) => (
             <button
               key={s.num}

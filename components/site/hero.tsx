@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden px-5 pb-16 pt-32 lg:px-8 lg:pb-24 lg:pt-40"
+      className="relative overflow-hidden px-5 pb-16 pt-28 sm:pt-32 lg:px-8 lg:pb-24 lg:pt-40"
     >
       {/* soft warm glow accents */}
       <div className="pointer-events-none absolute -right-32 -top-32 -z-10 size-[36rem] rounded-full bg-accent/50 blur-3xl" />
@@ -26,19 +26,19 @@ export function Hero() {
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         {/* left — copy */}
-        <div>
+        <div className="max-lg:text-center">
           <motion.p
             custom={0}
             initial="hidden"
             animate="show"
             variants={lineVariants}
-            className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-primary"
+            className="mx-auto mb-6 flex max-w-[24rem] items-center justify-center font-mono text-[0.7rem] uppercase leading-relaxed tracking-[0.18em] text-primary sm:gap-3 sm:text-xs sm:tracking-[0.25em] lg:mx-0 lg:justify-start"
           >
-            <span className="h-px w-8 bg-primary" />
+            <span className="hidden h-px w-8 shrink-0 bg-primary sm:block" />
             Est. 2008 · An integrated media company
           </motion.p>
 
-          <h1 className="font-serif text-[clamp(2.6rem,6vw,5rem)] font-medium leading-[0.98] tracking-tight text-[var(--ink)]">
+          <h1 className="mx-auto max-w-[13.5ch] font-serif text-[clamp(2.35rem,9vw,4.5rem)] font-medium leading-[1] tracking-tight text-[var(--ink)] sm:max-w-[12ch] sm:text-[clamp(2.55rem,8vw,5rem)] lg:mx-0 lg:max-w-none lg:text-[clamp(2.6rem,6vw,5rem)] lg:leading-[0.98]">
             <motion.span
               custom={1}
               initial="hidden"
@@ -73,9 +73,9 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={lineVariants}
-            className="mt-8 max-w-md text-pretty text-base leading-relaxed text-foreground/75"
+            className="mx-auto mt-8 max-w-[34rem] text-pretty text-[1.05rem] leading-8 text-foreground/75 sm:text-base sm:leading-relaxed lg:mx-0 lg:max-w-md"
           >
-            Theatre Media is a full-service publishing house for theatres, opera
+            Stagecraft Media is a full-service publishing house for theatres, opera
             houses and arts venues — designing, producing, distributing and
             monetising the print that moves audiences from the foyer to their
             seats.
@@ -86,7 +86,7 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={lineVariants}
-            className="mt-10 flex flex-wrap items-center gap-4"
+            className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row sm:flex-wrap lg:justify-start"
           >
             <a
               href="#work"
@@ -97,7 +97,7 @@ export function Hero() {
             </a>
             <a
               href="#contact"
-              className="group inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.2em] text-foreground/70 transition-colors hover:text-primary"
+              className="group inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.14em] text-foreground/70 transition-colors hover:text-primary sm:tracking-[0.2em]"
             >
               Brief us today
               <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -110,12 +110,17 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.96, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.1, ease: easing, delay: 0.25 }}
-          className="relative"
+          className="relative mx-auto w-full max-w-[34rem] lg:max-w-none"
         >
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-2xl shadow-[var(--ink)]/10">
             <motion.img
-              src="/images/hero-stage.png"
+              src="/images/hero-stage.webp"
               alt="An ornate empty theatre stage lit by a single warm spotlight"
+              width={1254}
+              height={1254}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               initial={{ scale: 1.12 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.8, ease: easing }}
@@ -129,7 +134,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: easing, delay: 0.8 }}
-            className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-border bg-card/95 px-6 py-5 shadow-xl shadow-[var(--ink)]/10 backdrop-blur sm:block"
+            className="absolute bottom-4 left-4 hidden rounded-2xl border border-border bg-card/95 px-6 py-5 shadow-xl shadow-[var(--ink)]/10 backdrop-blur sm:block lg:-bottom-6 lg:-left-6"
           >
             <p className="font-serif text-3xl font-medium text-[var(--ink)]">
               3M+

@@ -20,9 +20,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Theatre Media — The Print & Publishing Partner for the Performing Arts',
+  title: 'Stagecraft Media — The Print & Publishing Partner for the Performing Arts',
   description:
-    'Theatre Media is a full-service publishing house for theatres, opera houses and arts venues — designing, producing, distributing and monetising the print that moves audiences from the foyer to their seats.',
+    'Stagecraft Media is a full-service publishing house for theatres, opera houses and arts venues — designing, producing, distributing and monetising the print that moves audiences from the foyer to their seats.',
   icons: {
     icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
     apple: '/apple-icon.png',

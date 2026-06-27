@@ -23,9 +23,9 @@ const serviceMenu = [
 
 function Logo() {
   return (
-    <a href="#home" className="flex items-center gap-3">
-      <span className="flex size-9 items-center justify-center rounded-md bg-[var(--ink)] text-primary">
-        <svg viewBox="0 0 24 24" className="size-5" fill="none" aria-hidden="true">
+    <a href="#home" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
+      <span className="flex size-8 shrink-0 items-center justify-center rounded-md bg-[var(--ink)] text-primary sm:size-9">
+        <svg viewBox="0 0 24 24" className="size-[1.125rem] sm:size-5" fill="none" aria-hidden="true">
           <path
             d="M4 9c2.5-3 13.5-3 16 0v11H4V9Z"
             stroke="currentColor"
@@ -35,8 +35,8 @@ function Logo() {
           <path d="M9 20v-7M15 20v-7" stroke="currentColor" strokeWidth="1.6" />
         </svg>
       </span>
-      <span className="font-serif text-xl font-semibold tracking-tight text-[var(--ink)]">
-        Theatre Media
+      <span className="truncate font-serif text-lg font-semibold tracking-tight text-[var(--ink)] sm:text-xl">
+        Stagecraft Media
       </span>
     </a>
   )
@@ -65,7 +65,7 @@ export function SiteNav() {
           : 'border-b border-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
         <Logo />
 
         <nav className="hidden items-center gap-1 lg:flex">

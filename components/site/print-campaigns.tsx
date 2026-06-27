@@ -29,6 +29,10 @@ function Card({
       <img
         src={image || '/placeholder.svg'}
         alt={alt}
+        width={1024}
+        height={1024}
+        loading="lazy"
+        decoding="async"
         className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--ink)]/85 via-[var(--ink)]/10 to-transparent" />
@@ -48,15 +52,15 @@ export function PrintCampaigns() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
       <Reveal>
-        <p className="mb-10 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-primary">
-          <span className="h-px w-8 bg-primary" />
+        <p className="mb-10 flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-primary max-lg:justify-center sm:text-xs sm:tracking-[0.25em]">
+          <span className="hidden h-px w-8 bg-primary sm:block" />
           03 / Craft &amp; reach
         </p>
       </Reveal>
 
       <div className="grid gap-4 lg:grid-cols-12 lg:gap-5">
         <Card
-          image="/images/print-fan.png"
+          image="/images/print-fan.webp"
           alt="Premium theatre magazines fanned out"
           tag="Print"
           title="Tactile, premium, kept."
@@ -64,7 +68,7 @@ export function PrintCampaigns() {
         />
         <div className="grid gap-4 lg:col-span-5 lg:gap-5">
           <Card
-            image="/images/marquee.png"
+            image="/images/marquee.webp"
             alt="A theatre marquee glowing at night"
             tag="Campaigns"
             title="Marquee to inbox."
@@ -72,7 +76,7 @@ export function PrintCampaigns() {
             delay={0.1}
           />
           <Card
-            image="/images/studio-team.png"
+            image="/images/studio-team.webp"
             alt="A creative studio team collaborating"
             tag="Studio"
             title="Embedded with you."
